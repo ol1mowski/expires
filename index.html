@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color</title>
+    <style>
+        .text {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab impedit vitae optio qui, accusantium ex omnis rem laborum voluptate sapiente excepturi nemo recusandae porro molestias, a soluta consequatur mollitia. Libero.</p>
+    <button class="button">Show text</button>
+    <button class="buttonColor">Change color</button>
+
+    <script>
+        const button = document.querySelector('.button');
+        const buttonColor = document.querySelector('.buttonColor');
+        const text = document.querySelector('.text');
+
+        button.addEventListener('click', () => {
+            text.style.display  === 'none' ? text.style.display = 'block' : text.style.display = 'none';
+        });
+
+        buttonColor.addEventListener('click', () => {
+            const one = Math.floor(Math.random()*255);
+            const two = Math.floor(Math.random()*255);
+            const three = Math.floor(Math.random()*255);
+
+            button.style.backgroundColor = `rgb(${one}, ${two}, ${three})`;
+            button.style.color = `rgb(${two}, ${three}, ${one})`;
+        });
+    </script>
+</body>
+</html>

@@ -1,38 +1,69 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random color</title>
+    <title>Witryny</title>
+    <link rel="stylesheet" href="18.css">
     <style>
-        .text {
-            display: none;
+        h1 {
+            color: #ff0000;
+            text-align: right;
+            text-decoration: underline;
+            font-size: 15px;
+        }
+        div,p {
+            width: 400px;
+            aspect-ratio: 2/1;
+            margin: 10px;
+            padding: 0 10px;
+            text-align: center;
+            background-color: #808080;
+            outline: 6px double #ff00ff;
         }
     </style>
 </head>
 <body>
-    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab impedit vitae optio qui, accusantium ex omnis rem laborum voluptate sapiente excepturi nemo recusandae porro molestias, a soluta consequatur mollitia. Libero.</p>
-    <button class="button">Show text</button>
-    <button class="buttonColor">Change color</button>
-
-    <script>
-        const button = document.querySelector('.button');
-        const buttonColor = document.querySelector('.buttonColor');
-        const text = document.querySelector('.text');
-
-        button.addEventListener('click', () => {
-            text.style.display  === 'none' ? text.style.display = 'block' : text.style.display = 'none';
-        });
-
-        buttonColor.addEventListener('click', () => {
-            const one = Math.floor(Math.random()*255);
-            const two = Math.floor(Math.random()*255);
-            const three = Math.floor(Math.random()*255);
-
-            button.style.backgroundColor = `rgb(${one}, ${two}, ${three})`;
-            button.style.color = `rgb(${two}, ${three}, ${one})`;
-        });
-    </script>
+    <h1>
+        Oliwier Markiewicz 4ti 18
+    </h1>
+    <p>
+        technik informatyk
+    </p>
+    <div>
+        otrzymasz tytuł technik informatyk 
+    </div>
+    <table style="width: 400px; aspect-ratio: 1">
+        <caption>Egzaminy</caption>
+        <tr>
+            <th colspan="2">Egzamin</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>EE08</td>
+            <td>75%</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>EE09</td>
+            <td>75%</td>
+        </tr>
+        <tr>
+            <td colspan="3">Zdał: TAK</td>
+        </tr>
+    </table>
+    <ol>
+        <li>Technik Informatyk</li>
+        <ul>
+            <li>EE08</li>
+            <li>EE09</li>
+        </ul>
+        <li>Technik Programista</li>
+        <ul>
+            <li>EE09</li>
+            <li>EE10</li>
+        </ul>
+    </ol>
 </body>
 </html>

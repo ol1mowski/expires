@@ -1,0 +1,32 @@
+* {
+    font-family: 'Arial Narrow';
+    line-height: 25px;
+    font-size: 18px;
+}
+
+table {
+    caption-side: bottom;
+    border-spacing: 10px 7px;
+    empty-cells: hide;
+    border: 5px dashed #ffff00;
+}
+
+th {
+    color: #ff0000;
+    font-size: 32px;
+    
+}
+
+td {
+    color: #0000ff;
+    font-size: 25px;
+
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+ul {
+    list-style-image: url('./img.png');
+}
